@@ -59,25 +59,24 @@ setState(() {
               },
             ),
           ),
-          CustomText(
-            text: st1,
-            color: KMainColor,
-            textSize: 16,
-            fontWeight: FontWeight.w400,
-            l: 15,
-            r: 60,
-            t: 31,
-            b: 29,
+          Row(
+            children: [
+              CustomText(
+                text: st1,
+                //condition ? expOne : Exp
+                color: st1==sentence1[0]?KMainColor:Colors.black,
+                textSize: 16,
+                fontWeight: FontWeight.w400,
+                l: 15, r: 0, t: 31, b: 29,
+              ),
+            ],
           ),
           CustomText(
             text: 'Log in',
             color: KMainColor,
             textSize: 18,
             fontWeight: FontWeight.w500,
-            l: 16.25,
-            r: 290,
-            t: 0,
-            b: 8,
+            l: 16.25, r: 290, t: 0, b: 8,
           ),
           Row(
             children: [
@@ -86,20 +85,14 @@ setState(() {
                 color: Colors.black,
                 textSize: 12,
                 fontWeight: FontWeight.w400,
-                l: 16.25,
-                r: 0,
-                t: 0,
-                b: 20,
+                l: 16.25, r: 0, t: 0, b: 20,
               ),
               CustomText(
                 text: 'Sign Up.',
                 color: KMainColor,
                 textSize: 12,
                 fontWeight: FontWeight.w400,
-                l: 0,
-                r: 0,
-                t: 0,
-                b: 20,
+                l: 0, r: 0, t: 0, b: 20,
               ),
             ],
           ),
@@ -111,15 +104,16 @@ setState(() {
             hintText: 'Password',
             suffixIcon: Icon(Icons.visibility_off),
           ),
-          CustomText(
-            text: st2,
-            color: KMainColor,
-            textSize: 12,
-            fontWeight: FontWeight.w400,
-            l: 16,
-            r: 150,
-            t: 12,
-            b: 20,
+          Row(
+            children: [
+              CustomText(
+                text: st2,
+                color: KMainColor,
+                textSize: 12,
+                fontWeight: FontWeight.w400,
+                l: 16, r: 0, t: 12, b: 20,
+              ),
+            ],
           ),
           OutlinedButton(
             style: OutlinedButton.styleFrom(
@@ -133,10 +127,7 @@ setState(() {
               textSize: 15,
               color: primryColor,
               fontWeight: FontWeight.w400,
-              l: 20,
-              r: 20,
-              t: 8,
-              b: 8,
+              l: 20, r: 20, t: 8, b: 8,
             ),
             onPressed: () {},
           )
